@@ -1,4 +1,6 @@
-{
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Lilita+One&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,12 +18,15 @@
     justify-content: space-between;
     align-items: center;
   }
+
   header .logo
   {
+    font-family: "Lilita One", sans-serif;
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
   }
+  
   .toggle
   {
     position: relative;
@@ -86,25 +91,28 @@
     z-index: 10;
   }
   
-  .text h2
+  .text h1
   {
+    font-family: "Lilita One", sans-serif;
     font-size: 5em;
     font-weight: 800;
     color: #fff;
     line-height: 1em;
     text-transform: uppercase;
   }
-  .text h3
+  .text h2
   {
+    font-family: "Lilita One", sans-serif;
     font-size: 4em;
     font-weight: 700;
     color: #fff;
     line-height: 1em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
-  .text p
+  .text h3
   {
-    font-size: 1.1em;
+    font-family: "Lilita One", sans-serif;
+    font-size: 1.3em;
     color: #fff;
     margin: 20px 0;
     font-weight: 400;
@@ -128,6 +136,27 @@
   {
     letter-spacing: 6px;
   }
+
+  /* Font awesome icon for Spotify */
+.fa-square-facebook {
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+/* Font awesome icon for You Tube */
+.fa-square-twitter {
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+/* Font awesome icon for Twitter */
+.fa-instagram {
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+}
   .social
   {
     position: absolute;
