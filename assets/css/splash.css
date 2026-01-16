@@ -1,0 +1,490 @@
+/* Splash Page Styles */
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #111;
+  overflow: hidden;
+  position: relative;
+}
+
+.splash-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.splash-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.splash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.splash-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.splash-header {
+  flex: 0;
+  padding-top: 20px;
+}
+
+.splash-logo {
+  font-family: "Lilita One", sans-serif;
+  font-size: 3.5em;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+  letter-spacing: 3px;
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.splash-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.splash-title {
+  margin-bottom: 1rem;
+}
+
+.splash-h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 4em;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+  letter-spacing: 2px;
+}
+
+.splash-tagline {
+  font-size: 1.3em;
+  color: #ddd;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.splash-album {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #ffeb3b;
+  max-width: 500px;
+}
+
+.album-badge {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #111;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.album-title {
+  font-family: "Lilita One", sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.album-producer {
+  font-size: 1em;
+  color: #bbb;
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+
+.album-status {
+  font-size: 0.95em;
+  color: #ffeb3b;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.splash-cta {
+  margin-top: 1rem;
+}
+
+.btn-enter {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #111;
+  padding: 15px 40px;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 235, 59, 0.4);
+  border: 2px solid #ffeb3b;
+  cursor: pointer;
+}
+
+.btn-enter:hover {
+  background: transparent;
+  color: #ffeb3b;
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 235, 59, 0.6);
+}
+
+.btn-enter:active {
+  transform: scale(0.98);
+}
+
+.splash-social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.splash-social li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.8em;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 2px solid rgba(255, 235, 59, 0.3);
+}
+
+.splash-social li a:hover {
+  background: #ffeb3b;
+  color: #111;
+  border-color: #ffeb3b;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 235, 59, 0.4);
+}
+
+.splash-footer {
+  flex: 0;
+  padding-bottom: 20px;
+}
+
+.scroll-hint {
+  color: #aaa;
+  font-size: 0.9em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrow {
+  display: inline-block;
+  font-size: 1.5em;
+  color: #ffeb3b;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.splash-scroll-area {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+  z-index: 5;
+}
+
+.enter-site-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+}
+
+.full-enter-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.full-enter-link:hover {
+  background: rgba(255, 235, 59, 0.05);
+}
+
+.enter-content {
+  text-align: center;
+  color: #fff;
+}
+
+.enter-content i {
+  font-size: 3em;
+  color: #ffeb3b;
+  margin-bottom: 1rem;
+  display: block;
+  animation: slideRight 0.8s ease-out;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.enter-content h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.enter-content p {
+  font-size: 1.1em;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .splash-logo {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+  }
+
+  .splash-h2 {
+    font-size: 2.8em;
+    letter-spacing: 1px;
+  }
+
+  .splash-tagline {
+    font-size: 1.1em;
+  }
+
+  .splash-album {
+    padding: 1.5rem 2rem;
+    max-width: 90%;
+  }
+
+  .album-title {
+    font-size: 2em;
+  }
+
+  .btn-enter {
+    padding: 12px 35px;
+    font-size: 1em;
+  }
+
+  .splash-social {
+    gap: 1.5rem;
+  }
+
+  .splash-social li a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5em;
+  }
+
+  .splash-content {
+    padding: 30px 15px;
+  }
+
+  .enter-content h2 {
+    font-size: 2em;
+  }
+
+  .enter-content i {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .splash-logo {
+    font-size: 2em;
+    letter-spacing: 1px;
+  }
+
+  .splash-h2 {
+    font-size: 2em;
+    letter-spacing: 0px;
+  }
+
+  .splash-tagline {
+    font-size: 0.95em;
+  }
+
+  .splash-album {
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid #ffeb3b;
+  }
+
+  .album-title {
+    font-size: 1.6em;
+  }
+
+  .album-producer {
+    font-size: 0.9em;
+  }
+
+  .album-status {
+    font-size: 0.85em;
+  }
+
+  .btn-enter {
+    padding: 10px 30px;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+
+  .splash-social {
+    gap: 1rem;
+  }
+
+  .splash-social li a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3em;
+  }
+
+  .scroll-hint {
+    font-size: 0.8em;
+  }
+
+  .arrow {
+    font-size: 1.2em;
+  }
+
+  .enter-content h2 {
+    font-size: 1.5em;
+  }
+
+  .enter-content i {
+    font-size: 2em;
+  }
+
+  .enter-content p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 375px) {
+  .splash-logo {
+    font-size: 1.6em;
+  }
+
+  .splash-h2 {
+    font-size: 1.6em;
+  }
+
+  .splash-tagline {
+    font-size: 0.85em;
+  }
+
+  .splash-album {
+    padding: 1rem 1.25rem;
+  }
+
+  .album-title {
+    font-size: 1.4em;
+  }
+
+  .album-badge {
+    font-size: 0.75em;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .btn-enter {
+    padding: 10px 25px;
+    font-size: 0.85em;
+  }
+
+  .splash-social li a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1em;
+  }
+}
