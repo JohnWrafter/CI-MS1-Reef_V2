@@ -1,0 +1,673 @@
+/* Merged CSS: style.css + pages.css + splash.css */
+
+/* ---------- style.css ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  header
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-family: "Lilita One", sans-serif;
+}
+
+li a:hover {
+  color: #ffeb3b;
+}
+
+
+
+  header .logo, li a
+  {
+    font-family: "Lilita One", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .toggle
+  {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url("https://i.ibb.co/HrfVRcx/menu.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .toggle.active
+  {
+    background: url(https://i.ibb.co/rt3HybH/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+  }
+  .showcase
+  {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  .showcase.active
+  {
+    right: 300px;
+  }
+  
+  .showcase video
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  
+  .video-container
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .video-loader
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .video-loader.loaded
+  {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .spinner
+  {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  @keyframes spin
+  {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .video-loader p
+  {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  }
+  .overlay
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    mix-blend-mode: darken;
+  }
+  .text
+  {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .text h1
+  {
+    font-family: "Lilita One", sans-serif;
+    font-size: 5em;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  .text h2
+  {
+    font-family: "Lilita One", sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1em;
+    /* text-transform: uppercase; */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  .text h3
+  {
+    font-family: "Lilita One", sans-serif;
+    font-size: 1.3em;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  }
+  .text a
+  {
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+  }
+  
+  .text a:hover
+  {
+    letter-spacing: 6px;
+  }
+  
+  .social li
+  {
+    list-style: none;
+  }
+  
+  .social li a
+  {
+    display: inline-block;
+    margin-right: 20px;
+    filter: invert(1);
+    transform: scale(0.5);
+    transition: 0.5s;
+  }
+  
+  .social li a:hover
+  {
+    transform: scale(0.5) translateY(-15px);
+  }
+  
+  .menu ul
+  {
+    position: relative;
+  }
+  
+  .menu ul li
+  {
+    list-style: none;
+  }
+  
+  .menu ul li a
+  {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+  }
+  
+  .menu ul li a:hover
+  {
+    color: #03a9f4;
+  }
+
+/* ---------- pages.css ---------- */
+
+/* Page-specific styles */
+
+.page-body {
+  background: #f8f9fa;
+}
+
+.page-header {
+  background: #111;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-header .logo {
+  margin: 0;
+}
+
+.page-header .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Lilita One", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.page-header .logo a:hover {
+  color: #ffeb3b;
+}
+
+.page-content {
+  min-height: calc(100vh - 200px);
+  background: #fff;
+  margin-bottom: 0;
+}
+
+.page-content h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 3em;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+.page-content h3 {
+  font-family: "Lilita One", sans-serif;
+  color: #111;
+  font-size: 1.8em;
+}
+
+.page-content h4 {
+  font-family: "Lilita One", sans-serif;
+  color: #111;
+}
+
+.news-article,
+.blog-post {
+  background: #fff;
+}
+
+.news-article h3,
+.blog-post h3 {
+  color: #111;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.news-article h3:hover,
+.blog-post h3:hover {
+  color: #ffeb3b;
+}
+
+.news-article p,
+.blog-post p {
+  line-height: 1.8;
+  color: #333;
+}
+
+.contact-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ffeb3b;
+}
+
+.contact-card h5 {
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.contact-card a {
+  color: #111;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-card a:hover {
+  color: #ffeb3b;
+}
+
+.contact-form {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-form .form-label {
+  font-weight: 600;
+  color: #111;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: #ffeb3b;
+  box-shadow: 0 0 0 0.2rem rgba(255, 235, 59, 0.25);
+}
+
+.btn-dark {
+  background: #111;
+  border: 1px solid #111;
+  transition: all 0.3s;
+}
+
+.btn-dark:hover {
+  background: #ffeb3b;
+  color: #111;
+  border-color: #ffeb3b;
+}
+
+.tour-notice {
+  border-left: 4px solid #ffeb3b;
+}
+
+.page-footer {
+  background: #111;
+  border-top: 1px solid #333;
+}
+
+.page-footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.page-footer .social li a {
+  color: #fff;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.page-footer .social li a:hover {
+  color: #ffeb3b;
+}
+
+.page-footer p {
+  margin: 0;
+  color: #aaa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-header .container {
+    padding: 0 20px;
+  }
+
+  .page-content {
+    padding: 1.5rem 0 !important;
+  }
+
+  .page-content h2 {
+    font-size: 2em;
+  }
+
+  .page-content h3 {
+    font-size: 1.3em;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .page-footer .social {
+    gap: 1.5rem;
+  }
+
+  .page-footer .social li a {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- splash.css ---------- */
+
+/* Splash Page Styles */
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #111;
+  overflow: hidden;
+  position: relative;
+}
+
+.splash-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.splash-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.splash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 1;
+}
+
+.splash-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.splash-header {
+  flex: 0;
+  padding-top: 20px;
+}
+
+.splash-logo {
+  font-family: "Lilita One", sans-serif;
+  font-size: 3.5em;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 0;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+  letter-spacing: 3px;
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.splash-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  animation: fadeIn 1s ease-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.splash-title {
+  margin-bottom: 1rem;
+}
+
+.splash-h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 4em;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+  letter-spacing: 2px;
+}
+
+.splash-tagline {
+  font-size: 1.3em;
+  color: #ddd;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.splash-album {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #ffeb3b;
+  max-width: 500px;
+}
+
+.album-badge {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #111;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.album-title {
+  font-family: "Lilita One", sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.album-producer {
+  font-size: 1em;
+  color: #bbb;
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+
+.album-status {
+  font-size: 0.95em;
+  color: #ffeb3b;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.splash-cta {
+  margin-top: 1rem;
+}
+
+.btn-enter {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #111;
+  padding: 15px 40px;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 235, 59, 0.4);
+  border: 2px solid #ffeb3b;
+  cursor: pointer;
+}
+
+.btn-enter:hover {
+  background: transparent;
+}

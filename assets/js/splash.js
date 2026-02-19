@@ -24,18 +24,25 @@ document.addEventListener('keydown', (e) => {
 // Mobile detection for performance optimization
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-if (isMobile) {
-  const video = document.querySelector('.splash-background video');
-  if (video) {
-    video.style.objectFit = 'cover';
-  }
-}
-
-// Ensure video loops properly
+// Ensure video loads and loops properly
 const video = document.querySelector('.splash-background video');
 if (video) {
+  if (isMobile) {
+    video.style.objectFit = 'cover';
+  }
+  
   video.addEventListener('ended', () => {
     video.currentTime = 0;
     video.play();
+  });
+  
+  // Add error handling for missing video formats
+  video.addEventListener('error', () => {
+    console.warn('Video failed to load. Ensuring MP4 fallback plays.');
+  });
+  
+  // Force play on mobile (muted is required)
+  video.play().catch((error) => {
+    console.warn('Video autoplay prevented:', error);
   });
 }
